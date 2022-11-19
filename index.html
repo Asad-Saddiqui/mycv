@@ -1,265 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cv</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <style>
-          @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
-          * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: sans-serif;
-        background-color: #222222;
-        width: 100%;
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <meta name="description" content="simple CV example created with HTML and CSS">
+  <meta name="author" content="Fly Nerd">
+  <link rel="icon" href="./img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Raleway');
 
-      }
-      a {
-        text-decoration: none;
-      }
-      li {
-        list-style: none;
-      }
-      .container {
-        width: 100%;
-        height: 100px;
-      }
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        color: #fff;
-      }
-      .nav-links a {
-        color: #fff;
-      }
-          /* LOGO */
-          .logo {
-        font-size: 32px;
-      }
-      /* NAVBAR MENU */
-      .menu {
-        display: flex;
-        gap: 1em;
-        font-size: 18px;
-      }
-      .menu li {
-        padding: 5px 14px;
-       /* border: 1px solid rgb(37, 21, 21); */
+body {
+  margin: 0;
+  font-family: 'Raleway';
+  font-size: 16px;
+  line-height: 1.8em;
+  background-color: #262323;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 100%;
+  height: 100px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: #fff;
+}
+.nav-links a {
+  color: #fff;
+}
+    /* LOGO */
+    .logo {
+  font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+.menu li {
+  padding: 5px 14px;
+ /* border: 1px solid rgb(37, 21, 21); */
 
-      }
-      .menu li:hover {
-       /* border: 1px solid white; */
-        border-radius: 5px;
-        transition: 0.3s ease;
-      }
-      input[type="checkbox"] {
-        display: none;
-      }
-      .hamburger {
-        display: none;
-        font-size: 24px;
-        user-select: none;
-      }
-  /* Profile CSS */
-  .profilepic {
-        width: 70%;
-        height: 60vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-       
-      }
-      .img {
-        width: 300px;
-        height: auto;
-      }
-      img {
-        border-radius: 50%;
-        width: 100%;
-        height: 100%;
-        border: 7px solid rgb(90, 90, 90);
-      }
-      .contant {
-        color: white;
-        margin-left: 45px;
-        z-index: -1;
-      }  
-      .contant p{
-        text-align: left;
-      }
-      input[type="button"] {
-        width: 100px;
-        height: auto;
-        font-size: 17px;
-        padding: 5px;
-        border: 2px solid white;
-        color: white;
-        border-radius: 20px;
-        margin-top: 10px;
-        background-color: #222222;
-      }
-      input[type="button"]:hover {
-        background-color: white;
-        color: black;
-      }
-      span {
-        color: rgb(180, 180, 180);
-      }
-      h1 {
-        font-size: 40px;
-        font-weight: 700;
-      }
-      .skills {
-      width: 80%;
-      height:300px;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-      }
-      .subheadding1 {
-        color: white;
-        font-size: 20px;
-      }
-      .subsecion {
-        display: flex;
-        width: 450px;
-        float: left;
-        margin:10px;
-        color: white;
-      }
-      .icon{
-        margin-right: 10px;
-        font-size: 40px;
-        color: rgb(54, 54, 230);
-      }
-      .icon:hover{
-        color: rgb(0, 238, 255);
-      }
-  
-      .subh2{
-        color: rgb(212, 212, 212);
-        border-bottom: 5px solid rgb(24, 23, 23);
-        padding-bottom: 5px;
+}
+.menu li:hover {
+ /* border: 1px solid white; */
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
 
-      }
-       .subh2:hover{
-        border-bottom: 5px solid rgb(0, 238, 255);
-               
-       }
-       .h2{
-        text-align: center;
-        color: white;
-        font-weight: 800;
-        font-size: 30px;
-       }
-       .h2:hover{
-        color: rgb(0, 238, 255);
-       }
-       .programmingSkills{
-        background-color: #222222;
-        width: 100%;
-        margin-top: 20px;
-      }
-      .programmingSkills  div.subdiv{
-        width: 70%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
-        font-size: 20px;
-      }
-      .programmingSkills  div.subdiv table {
-        width: 100%;
+a {
+  color: #09f3e3bb;
+  text-decoration: none;
+}
 
-      }
-      .programmingSkills  div.subdiv table tr{
-        width: 100%;
+a:hover {
+  opacity: 0.5;
+}
 
-      }
-      .programmingSkills  div.subdiv table td{
-        width: 100%;
-      }
-      .div1{
-        width: 100%;
-        background-color: rgb(0, 0, 0);
+article {
+  padding:0 1em;
+}
 
-      }
-      .div2{
-        width: 92%;
-        background-color: rgb(192, 191, 191);
-        text-align: right;
-        padding-right: 5px;
-        color: black;
+section{
+  margin: 1em;
+  padding: 1em;
+}
 
-      }
-      .div3{
-        width: 88%;
-        background-color: rgb(112, 62, 73);
-        text-align: right;
-        padding-right: 5px;
-        color: rgb(255, 255, 255);
+header, main, footer {
+  margin: 0 auto;
+}
 
-        
-      }
-      .div4{
-        width: 85%;
-        background-color: rgb(59, 85, 42);
-        text-align: right;
-        padding-right: 5px;
-        color: rgb(255, 255, 255);
+header {
+  padding: 2em;
+  text-align: center;
+  /* background-image: url('data:image/jpeg;base64,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'); */
+  background-size: cover;
+  background-position: fixed;
+  background-color: #222222;
+  color: white;
+}
 
-      }
-      .div5{
-        width: 80%;
-        background-color: rgb(49, 85, 85);
-        text-align: right;
-        padding-right: 5px;
-        color: rgb(255, 255, 255);
+header section {
+  margin: 0 auto;
+  max-width: 640px;
+}
 
-      }
-      .div6{
-        width: 60%;
-        background-color: rgb(42, 99, 24);
-        text-align: right;
-        padding-right: 5px;
-      }
-      .div7{
-        width: 40%;
-        background-color: rgb(81, 62, 245);
-        text-align: right;
-        padding-right: 5px;
-      }
+header img {
+  border-radius: 50%;
+  max-width: 150px;
+}
 
-       /*  */
-       h2{
-        margin: 4px;
-      }
-      .subheadding{
-        font-size: 20px;
-        margin: 4px;
-      }
-      p{
-        text-align: left;
-        padding-top: 4px;
-      }
-      footer{
+h1 {
+  text-transform: uppercase;
+  margin: 1em 0;
+  color: white;
+}
+
+h3 {
+  color: white;
+  text-transform: uppercase;
+}
+
+ h4 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 24px;
+}
+h3{
+  color: rgb(194, 120, 120);
+  font-weight: bold;
+  font-size: 30px;
+}
+p{
+  font-size: 20px;
+}
+
+main {
+  color: white;
+  max-width: 1140px;
+}
+
+main section:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.fab {
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  margin: 5px;
+  text-align: center;
+}
+
+a .fab {
+  color: rgb(255, 255, 255);
+}
+
+.course, .skills {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.course .title {
+  color: #ffffff;
+  -ms-flex: 0 0 33.3%;
+  flex: 0 0 33.3%;
+  max-width: 33%;
+}
+
+.course .descrition {
+  -ms-flex: 0 0 66.6%;
+  flex: 0 0 66.6%;
+  max-width: 66.6%;
+}
+
+.course .descrition p {
+  padding-left: 1em;
+}
+
+.skills .column {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.skills .column ul, ul.job-description {
+  list-style-type: none;
+}
+
+.skills .column ul > li:before {
+  content: "►";
+  padding-right: 0.5em;
+  color: #00ffea;
+}
+
+.school, .job-title {
+  text-transform: capitalize;
+}
+
+.school span, .job-title span {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+ul.job-description li:before{
+  content: "✔";
+  padding-right: 0.5em;
+  color: #00ffea;
+}
+
+footer{
 	position: relative;
 	bottom: 0;
 }
 .footer-distributed{
-	background-color: #292c2f;
+	background-color: #222222;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -306,7 +269,7 @@
 
  
 .footer-distributed .footer-company-name{
-	color:  #8f9296;
+	color:  #ffffff;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
@@ -350,7 +313,7 @@
 }
  
 .footer-distributed .footer-center p a{
-	color:  #5383d3;
+	color:  #ffffff;
 	text-decoration: none;;
 }
  
@@ -360,7 +323,7 @@
  
 .footer-distributed .footer-company-about{
 	line-height: 20px;
-	color:  #92999f;
+	color:  #ffffff;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
@@ -396,318 +359,297 @@
 }
 
 
-
-
-
-    /* APPLYING MEDIA QUERIES */
-    @media (max-width: 1200px){
- .skills{
-    height: 450px;
- }
-    }
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
        
-        .menu {
-          display: none;
-          position: absolute;
-          right: 0;
-          left: 0;
-          top: 10%;
-          text-align: center;
-          padding: 7px;
-          z-index: 1;
-          background-color: #222222;
-        }
-        .menu li:hover {
-          display: inline-block;
-          background-color: #000000;
-          transition: 0.3s ease;
-        }
-        .menu li + li {
-          margin-top: 12px;
-          border: none;
-        }
-        input[type="checkbox"]:checked ~ .menu {
-          display: block;
-        }
-        .hamburger {
-          display: block;
-        }
-        .dropdown {
-          left: 50%;
-          top: 30px;
-          transform: translateX(35%);
-        }
-        .dropdown li:hover {
-          background-color: #4c9e9e;
-        }
-        li{
-            border: none;
-        }
-        .programmingSkills{
-            padding-top: 50px;
-        }
-      }
-      @media (max-width: 880px) {
- 
- .footer-distributed{
-     font: bold 14px sans-serif;
-      width: 100%;
-
- }
-
- .footer-distributed .footer-left,
- .footer-distributed .footer-center,
- .footer-distributed .footer-right{
-     display: block;
-     width: 100%;
-     margin-bottom: 40px;
-     text-align: center;
- }
-
- .footer-distributed .footer-center i{
-     margin-left: 0;
- }
- .main {
-     line-height: normal;
-     font-size: auto;
- }
-
+  .menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 10%;
+    text-align: center;
+    padding: 7px;
+    z-index: 1;
+    background-color: #222222;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #000000;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+    border: none;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
+  li{
+      border: none;
+  }
+  .programmingSkills{
+      padding-top: 50px;
+  }
 }
 
-    </style>
+@media only screen and (max-width: 768px) {
+  .course {
+    display: block;
+  }
+
+  .course .title, .course .descrition {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .skills {
+    display: block;
+  }
+
+  .skills .column {
+    max-width: 100%;
+  }
+
+  
+}
+@media (max-width: 880px) {
+ 
+  .footer-distributed{
+      font: bold 14px sans-serif;
+      width: 100%;
+  
+  }
+ 
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+  }
+ 
+  .footer-distributed .footer-center i{
+      margin-left: 0;
+  }
+  .main {
+      line-height: normal;
+      font-size: auto;
+  }
+ 
+ }
+
+	</style>
 </head>
+
 <body>
+  <header>
     <div class="container">
-        <nav class="navbar">
-          <!-- LOGO -->
-          <div class="logo">Profile</div>
-          <!-- NAVIGATION MENU -->
-          <ul class="nav-links">
-            <!-- USING CHECKBOX HACK -->
-            <input type="checkbox" id="checkbox_toggle" />
-            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-            <!-- NAVIGATION MENUS -->
-            <div class="menu">
-              <li><a href="#!">Home</a></li>
-              <li><a href="#!">About</a></li>
-              <li class="services">
-                <a href="#!">Services</a>
-              </li>
-              <li><a href="/">Pricing</a></li>
-              <li><a href="/">Contact</a></li>
-            </div>
+      <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">Profile</div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+            <li><a href="#!">Home</a></li>
+            <li><a href="#!">About</a></li>
+            <li class="services">
+              <a href="#!">Services</a>
+            </li>
+            <li><a href="/">Pricing</a></li>
+            <li><a href="/">Contact</a></li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <img src="https://lh3.googleusercontent.com/a/ALm5wu1YQqAD-qOoO-rsTWl-EwoHAP9r9d6aSe9h9mT3=s288-p-rw-no" />
+    </div>
+    <h1>Asad Saddiqui</h1>
+    <section>
+      <p>Hello! I am Asad Saddiqui. I work as interface and front-end developer. I have passion for pixel perfect, minimal and easy to use interfaces. I'm  focused, dedicated, hard-working and willing to learn in a changing and challenging environment.</p>
+      <a href="https://www.facebook.com/flynerdpl/" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.twitter.com/flynerdpl/" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://github.com/ritaly" target="_blank">
+        <i class="fab fa-github-alt"></i>
+      </a>
+      <a href="https://www.instagram.com/flynerdpl/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/ritalyczywek/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </section>
+  </header>
+  <main>
+    <section>
+      <h3>Courses </h3>
+      <article class='course'>
+        <div class='title'>
+          <h4>W3school: Intro to HTML and CSS</h4>
+        </div>
+        <div class="descrition">
+          <p>Build styled, well-structured websites. Learn how to use HTML5 standard to create websites. Understand CSS syntax, selectors, and units. Learn about code editors and a browser's Developer Tools.</p>
+        </div>
+      </article>
+      <article class='course'>
+        <div class='title'>
+          <h4>Udemy: The Web Developer Bootcamp</h4>
+        </div>
+        <div class="descrition">
+          <p>Learn how to create full-stack web applications from scratch using HTML, CSS, JavaScript, jQuery, VanillaJS, NodeJS, MongoDB.</p>
+        </div>
+      </article>
+     
+      <article class='course'>
+        <div class='title'>
+          <h4>React Js: Frame Work</h4>
+        </div>
+        <div class="descrition">
+          <p>Learn front-end development with simple blog application using React js  framework.</p>
+        </div>
+      </article>
+    </section>
+    <section>
+      <h3>Skills</h3>
+      <div class='skills'>
+        <div class='column'>
+          <h4>Good knowledge</h4>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript ES5/6</li>
+            <li>SQL</li>
           </ul>
-        </nav>
-      </div>
-      <div class="profilepic">
-        <div class="img">
-          <img
-            src="https://lh3.googleusercontent.com/a/ALm5wu1YQqAD-qOoO-rsTWl-EwoHAP9r9d6aSe9h9mT3=s288-p-rw-no"
-            alt=""
-            srcset=""
-          />
         </div>
-        <div class="contant">
-          <span>Full Stack Developer</span>
-          <h1>Asad Saddiqui</h1>
-          <p>
-            My objective is simply to be the best web developer that I can be and to contribute to the technology industry all that I know and can do
-          </p>
-          <input type="button" value="Contact" />
+        <div class='column'>
+          <h4>Basic knowledge</h4>
+          <ul>
+            <li>jQuery</li>
+            <li>NodeJS</li>
+            <li>MongoDB</li>
+            <li>React Js</li>
+          </ul>
         </div>
-      </div>
-      <div class="skills">
-        <h2 ><span class="subh2">What I Do</span> </h2 class="subh2">
-        <div class="subsecion">
-          <div class="icon">&#10065;</div>
-          <div class="subcontainer">
-            <h3 class="subheadding">MS Office</h3>
-            <p>
-              Word.
-              Excel.
-              PowerPoint.
-              Outlook.
-              OneNote.
-              OneDrive.
-             
-            </p>
-          </div>
+       
+    </section>
+
+    <section>
+      <h3>Education</h3>
+      <article>
+        <div class='school'>
+          <span>Matric :</span> <strong>Lahore Board ( 2015-2017 )</strong>
         </div>
-        <div class="subsecion">
-          <div class="icon">&#9885;
-          </div>
-          <div class="subcontainer">
-            <h3 class="subheadding">React Js</h3>
-            <p>
-              Social Media App. ...  &nbsp; &nbsp;
-              eCommerce App. ... <br>
-              Productivity App. ...  &nbsp; &nbsp;
-              Entertainment App. ... <br>
-              Blog. ... <br>
-            </p>
-          </div>
+        <div class="descrition">
+          Universal Model High school Lahore
         </div>
-        <div class="subsecion">
-          <div class="icon"><i class="fa fa-laptop"></i></div>
-          <div class="subcontainer">
-            <h3 class="subheadding">MERN Stack Web Development</h3>
-            <p>
-              Travel Log App. ... <br>
-              Personal Project Management Tool. ... <br>
-            Public Blog App. ... <br>
-            E-Commerce Website/Shopify Clone. ... <br>
-  
-            </p>
-          </div>
+      </article>
+      <article>
+        <div class='school'>
+          <span>FSC :</span> <strong>Lahore Board ( 2017-2019 ) </strong>
         </div>
-        <div class="subsecion">
-          <div class="icon"><i class="fa fa-database"></i></div>
-          <div class="subcontainer">
-            <h3 class="subheadding">Data Base</h3>
-            <p>
-              MySQL, SQL Server, MongoDB, Oracle Database, PostgreSQL, Informix, Sybase, etc
-            </p>
-          </div>
+        <div>
+          MAO College Lahore
         </div>
-      </div>
-      <h2 class="h2"> </h2>
-      <div class="programmingSkills">
-          <div class="subdiv">
-  
-              <table class="program">
-                  <h2>
-                  Programming Skills
-              </h2>
-              <tbody>
-                  <tr>
-                      <td>
-                          HTML
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <div class="div1">
-                              <div class="div2">92%</div>
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          CSS
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <div class="div1">
-                              <div class="div3">88%</div>
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          Java Script
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <div class="div1">
-                              <div class="div4">85%</div>
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          React Js
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <div class="div1">
-                              <div class="div5">80%</div>
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          Node Js
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <div class="div1">
-                              <div class="div6">60%</div>
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          MongoDB
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <div class="div1">
-                              <div class="div7">40%</div>
-                          </div>
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
-      </div>
-      </div>
-      <footer class="footer-distributed">
+      </article>
+      <article>
+        <div class='school'>
+          <span>BSCS :</span> <strong>Session( 2019-2023 ) </strong>
+        </div>
+        <div>
+          University Of Azad Jammu And Kashmir Muzaffarabad
+        </div>
+      </article>
+    </section>
+    <section>
+      <h3>Experience</h3>
+      <article>
+        <div class='job-title'>
+           <strong>Position:</strong> Web developer Intern
+        </div>
+        <div>
+          <p><strong>Tech stack:</strong> HTML5 / CSS / JavaScript / jQuery</p>
+          <ul class="job-description">
+            <li>Develop web application for Pratics</li>
+            <li>Implement UI (front-end site) based on received graphic design and requirements</li>
+            <li>Co-operate with the back-end team </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="footer-distributed">
    
-              <div class="footer-left">
-   
-                  <h3>WebDev<span>Trick</span></h3>
-         <h2>Mern Stack Development</h2>
-         <ul>
-          <li>MongoDB</li>
-          <li>Express</li>
-          <li>React</li>
-          <li>Node</li>
-         </ul>
-   
-              </div>
-   
-              <div class="footer-center">
-   
-                  <div>
-                      <i class="fa fa-map-marker"></i>
-                      <p> Muzaffarabad, Azad Kashmir</p>
-                  </div>
-   
-                  <div>
-                      <i class="fa fa-phone"></i>
-                      <p>+923457494538</p>
-                  </div>
-   
-                  <div>
-                      <i class="fa fa-envelope"></i>
-                      <p><a href="asadsaddiqui@gmail.com">asadsaddiqui@gmail.com</a></p>
-                  </div>
-   
-              </div>
-   
-              <div class="footer-right">
-   
-                  <p class="footer-company-about">
-                      <span>About the company</span>
-                      Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
-                  </p>
-   
-                  <div class="footer-icons">
-   
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                      <a href="#"><i class="fa fa-linkedin"></i></a>
-                      <a href="#"><i class="fa fa-github"></i></a>
-   
-                  </div>
-   
-              </div>
-   
-          </footer>
+    <div class="footer-left">
+
+        <h3>WebDev<span>Trick</span></h3>
+<h2>Mern Stack Development</h2>
+<ul>
+<li>MongoDB</li>
+<li>Express</li>
+<li>React</li>
+<li>Node</li>
+</ul>
+
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p> Muzaffarabad, Azad Kashmir</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+923457494538</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="asadsaddiqui@gmail.com">asadsaddiqui@gmail.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>About the company</span>
+            Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+        </p>
+
+        <div class="footer-icons">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+    </div>
+
+</footer>
 </body>
 </html>
