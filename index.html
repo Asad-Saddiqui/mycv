@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="profile.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+    <style>
+      
+      @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        background-color: #222222;
+
+      }
+      a {
+        text-decoration: none;
+      }
+      li {
+        list-style: none;
+      }
+      /* NAVBAR STYLING STARTS */
+      .navbar {
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-between;
+        padding: 20px;
+        /* background-color: rgb(0, 0, 0); */
+        color: #fff;
+      }
+      .container {
+        width: 100%;
+        height: 150vh;
+        background-color: #222222;
+        background-position: center;
+        background-size: cover;
+        /* animation: image 50s infinite alternate; */
+      }
+      @keyframes image {
+        0% {
+          background-image: url("https://media.istockphoto.com/id/1248263998/photo/isolated-high-tech-open-laptop-with-abstract-vibrant-color-screen-on-a-dark-background.jpg?b=1&s=170667a&w=0&k=20&c=cH1KTmzrd-NOkRiLAw_gJOJ9I4Qsylw1yOmYTQmDwfw=");
+        }
+        20% {
+          background-image: url("https://media.istockphoto.com/id/1436025617/vector/innovation-cyber-high-security-by-padlock-and-secret-code-background.jpg?s=612x612&w=0&k=20&c=j10umKFv8TweOdbjwSfLIrzYZz8y1qhs87wJjFLPcfk=");
+        }
+        40% {
+          background-image: url("https://media.istockphoto.com/id/1226615193/photo/modern-laptop-with-blue-light.jpg?s=612x612&w=0&k=20&c=r9inOcPDaWp38-Q0aUZWHhrHtvH0gc8SZ8P7DkBb_FU=");
+        }
+        60% {
+          background-image: url("https://media.istockphoto.com/id/1383696994/photo/3d-rendering-of-cyberpunk-ai-circuit-board-technology-background-central-computer-processors.jpg?s=612x612&w=0&k=20&c=16xP_K_fOce4O4dzfoxUKfKpzxhMfT7n1cFb1z1jsi8=");
+        }
+        80% {
+          background-image: url("https://media.istockphoto.com/id/1349921584/photo/laptop-computer-notebook-keyboard-screen-blue-glow-wireless-technology-online.jpg?s=612x612&w=0&k=20&c=i7sch81WUNypJV-y1nUxk6aEW3qjuwLeJEnKNKC5_hg=");
+        }
+        100% {
+          background-image: url("https://media.istockphoto.com/id/1413436908/vector/cloud-storage-with-smartphone-in-isometric-data-center-with-data-exchange-for-hosting-or.jpg?s=612x612&w=0&k=20&c=r5-UAOOPapKZFkBOsmhESIuTimbmkqcXpbQRkeyvOXU=");
+        }
+      }
+      .nav-links a {
+        color: #fff;
+      }
+      /* LOGO */
+      .logo {
+        font-size: 32px;
+      }
+      /* NAVBAR MENU */
+      .menu {
+        display: flex;
+        gap: 1em;
+        font-size: 18px;
+      }
+      .menu li:hover {
+        /* background-color: #000000; */
+        border-radius: 5px;
+        transition: 0.3s ease;
+      }
+      .menu li {
+        padding: 5px 14px;
+      }
+      /*RESPONSIVE NAVBAR MENU STARTS*/
+      /* CHECKBOX HACK */
+      input[type="checkbox"] {
+        display: none;
+      }
+      /*HAMBURGER MENU*/
+      .hamburger {
+        display: none;
+        font-size: 24px;
+        user-select: none;
+      }
+      /* APPLYING MEDIA QUERIES */
+      @media (max-width: 768px) {
+        .menu {
+          display: none;
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: 10%;
+          text-align: center;
+          padding: 7px;
+          z-index: 1;
+          background-color: #222222;
+        }
+        .menu li:hover {
+          display: inline-block;
+          background-color: #000000;
+          transition: 0.3s ease;
+        }
+        .menu li + li {
+          margin-top: 12px;
+        }
+        input[type="checkbox"]:checked ~ .menu {
+          display: block;
+        }
+        .hamburger {
+          display: block;
+        }
+        .dropdown {
+          left: 50%;
+          top: 30px;
+          transform: translateX(35%);
+        }
+        .dropdown li:hover {
+          background-color: #4c9e9e;
+        }
+      }
+      /* Profile CSS */
+      .profilepic {
+        width: 70%;
+        height: 60vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, -50%);
+      }
+      .img {
+        width: 700px;
+        height: auto;
+      }
+
+      img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        border: 7px solid rgb(90, 90, 90);
+      }
+      .contant {
+        color: white;
+        margin-left: 45px;
+        
+        z-index: -1;
+      }
+      .contant p{
+        text-align: left;
+      }
+      input[type="button"] {
+        width: 100px;
+        height: auto;
+        font-size: 17px;
+        padding: 5px;
+        border: 2px solid white;
+        color: white;
+        border-radius: 20px;
+        margin-top: 10px;
+        background-color: #222222;
+      }
+      input[type="button"]:hover {
+        background-color: white;
+        color: black;
+      }
+      span {
+        color: rgb(180, 180, 180);
+      }
+      h1 {
+        font-size: 40px;
+        font-weight: 700;
+      }
+      .skills {
+        width: 80%;
+        height: 600px;
+        position: relative;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -50%);
+      }
+   
+      table {
+        margin-top: 10px;
+      }
+      .subheadding1 {
+        color: white;
+        font-size: 20px;
+      }
+      .subsecion {
+        display: flex;
+        width: 450px;
+        float: left;
+        margin:10px;
+        color: white;
+      }
+      @media screen and (max-width:1183px){
+        .subsecion{
+          width: 850px;
+          border-bottom: 1px solid white;
+
+        }
+      }
+      @media screen and (max-width:993px){
+        .subsecion{
+          width: 700px;
+          border-bottom: 1px solid white;
+
+        }
+      }
+      @media screen and (max-width:840px){
+        .subsecion{
+          width: 550px;
+          border-bottom: 1px solid white;
+
+        }
+      }
+      
+      .icon{
+        margin-right: 10px;
+        font-size: 40px;
+        color: rgb(54, 54, 230);
+      }
+      .icon:hover{
+        color: rgb(0, 238, 255);
+      }
+  
+      .subh2{
+        color: rgb(212, 212, 212);
+        border-bottom: 5px solid rgb(24, 23, 23);
+        padding-bottom: 5px;
+
+      }
+       .subh2:hover{
+        border-bottom: 5px solid rgb(0, 238, 255);
+               
+       }
+      h2{
+margin: 4px;
+      }
+      .subheadding{
+        font-size: 25px;
+        margin: 4px;
+      }
+      p{
+        text-align: left;
+        padding-top: 4px;
+      }
+      .programmingSkills{
+        background-color: #222222;
+        width: 100%;
+        margin-top: 6%;
+        
+
+      }
+    
+
+      .programmingSkills  div.subdiv{
+        width: 70%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 25px;
+      }
+    
+      .programmingSkills  div.subdiv table {
+        width: 100%;
+
+      }
+      .programmingSkills  div.subdiv table tr{
+        width: 100%;
+
+      }
+      .programmingSkills  div.subdiv table td{
+        width: 100%;
+      }
+      .div1{
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+
+      }
+      .div2{
+        width: 92%;
+        background-color: rgb(192, 191, 191);
+        text-align: right;
+        padding-right: 5px;
+        color: black;
+
+      }
+      .div3{
+        width: 88%;
+        background-color: rgb(112, 62, 73);
+        text-align: right;
+        padding-right: 5px;
+        color: rgb(255, 255, 255);
+
+        
+      }
+      .div4{
+        width: 85%;
+        background-color: rgb(59, 85, 42);
+        text-align: right;
+        padding-right: 5px;
+        color: rgb(255, 255, 255);
+
+      }
+      .div5{
+        width: 80%;
+        background-color: rgb(49, 85, 85);
+        text-align: right;
+        padding-right: 5px;
+        color: rgb(255, 255, 255);
+
+      }
+      .div6{
+        width: 60%;
+        background-color: rgb(42, 99, 24);
+        text-align: right;
+        padding-right: 5px;
+      }
+      .div7{
+        width: 40%;
+        background-color: rgb(81, 62, 245);
+        text-align: right;
+        padding-right: 5px;
+      }
+
+
+/* Sticky footer position and size
+-------------------------------------------------- */
+
+footer{
+	position: relative;
+	bottom: 0;
+}
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+ 
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+.footer-distributed .footer-left{
+	width: 40%;
+
+}
+ 
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+ 
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+.footer-left h2{
+  color:wheat;
+}
+ 
+.footer-left ul li {
+  color:  #5383d3;
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-left: 10px;
+}
+ 
+
+
+ 
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+ 
+.footer-distributed .footer-center{
+	width: 35%;
+}
+ 
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+ 
+.footer-distributed .footer-right{
+	width: 20%;
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+ 
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+ 
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+@media screen and (max-width:813px){
+
+.programmingSkills{
+margin-top: 15%;
+
+
+}
+
+}
+@media screen and (max-width:695px){
+
+.programmingSkills{
+background-color: #222222;
+margin-top: 15%;
+
+
+}
+
+}
+@media screen and (max-width:660px){
+.subsecion{
+  width: 450px;
+  border-bottom: 1px solid white;
+
+}
+.programmingSkills{
+background-color: #222222;
+margin-top: 19%;
+
+
+}
+h1{
+font-size: 25px;
+}
+}
+@media screen and (max-width:529px){
+.subsecion{
+  width: 350px;
+  border-bottom: 1px solid white;
+
+}
+.programmingSkills{
+background-color: #222222;
+margin-top: 55%;
+
+}
+}
+@media screen and (max-width:463px){
+.skills{
+text-align: center;
+left: 40%;
+
+}
+.subsecion{
+  width: 300px;
+  border-bottom: 1px solid white;
+
+}
+.programmingSkills{
+background-color: #222222;
+margin-top: 70%;
+
+
+}
+}
+@media screen and (max-width:436px){
+.skills{
+left: 40%;
+
+}
+
+.programmingSkills{
+margin-top: 90%;
+
+
+}
+
+.programmingSkills  div.subdiv{
+
+font-size: 20px;
+}
+}
+@media screen and (max-width:436px){
+.skills{
+left: 40%;
+
+}
+
+.programmingSkills{
+margin-top: 90%;
+
+
+}
+
+.programmingSkills  div.subdiv{
+
+font-size: 20px;
+}
+}
+@media (max-width: 880px) {
+ 
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	
+	}
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+	.main {
+		line-height: normal;
+		font-size: auto;
+	}
+ 
+}
+
+    </style>
+    
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">Profile</div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+            <li><a href="#!">Home</a></li>
+            <li><a href="#!">About</a></li>
+            <li class="services">
+              <a href="#!">Services</a>
+            </li>
+            <li><a href="/">Pricing</a></li>
+            <li><a href="/">Contact</a></li>
+          </div>
+        </ul>
+      </nav>
+      <div class="profilepic">
+        <div class="img">
+          <img
+            src="https://lh3.googleusercontent.com/a/ALm5wu1YQqAD-qOoO-rsTWl-EwoHAP9r9d6aSe9h9mT3=s288-p-rw-no"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="contant">
+          <span>Full Stack Developer</span>
+          <h1>Asad Saddiqui</h1>
+          <p>
+            My objective is simply to be the best web developer that I can be and to contribute to the technology industry all that I know and can do
+          </p>
+          <input type="button" value="Contact" />
+        </div>
+      </div>
+      <div class="skills">
+        <h2 ><span class="subh2">What I Do</span> </h2 class="subh2">
+        <div class="subsecion">
+          <div class="icon">&#10065;</div>
+          <div class="subcontainer">
+            <h3 class="subheadding">MS Office</h3>
+            <p>
+              Word.
+              Excel.
+              PowerPoint.
+              Outlook.
+              OneNote.
+              OneDrive.
+             
+            </p>
+          </div>
+        </div>
+        <div class="subsecion">
+          <div class="icon">&#9885;
+          </div>
+          <div class="subcontainer">
+            <h3 class="subheadding">React Js</h3>
+            <p>
+              Social Media App. ...  &nbsp; &nbsp;
+              eCommerce App. ... <br>
+              Productivity App. ...  &nbsp; &nbsp;
+              Entertainment App. ... <br>
+              Blog. ... <br>
+            </p>
+          </div>
+        </div>
+        <div class="subsecion">
+          <div class="icon"><i class="fa fa-laptop"></i></div>
+          <div class="subcontainer">
+            <h3 class="subheadding">MERN Stack Web Development</h3>
+            <p>
+              Travel Log App. ... <br>
+Personal Project Management Tool. ... <br>
+Public Blog App. ... <br>
+E-Commerce Website/Shopify Clone. ... <br>
+
+            </p>
+          </div>
+        </div>
+        <div class="subsecion">
+          <div class="icon"><i class="fa fa-database"></i></div>
+          <div class="subcontainer">
+            <h3 class="subheadding">Data Base</h3>
+            <p>
+              MySQL, SQL Server, MongoDB, Oracle Database, PostgreSQL, Informix, Sybase, etc
+            </p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <div class="programmingSkills">
+        <div class="subdiv">
+
+            <table class="program">
+                <h1>
+                Programming Skills
+            </h1>
+            <tbody>
+                <tr>
+                    <td>
+                        HTML
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="div1">
+                            <div class="div2">92%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CSS
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="div1">
+                            <div class="div3">88%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Java Script
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="div1">
+                            <div class="div4">85%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        React Js
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="div1">
+                            <div class="div5">80%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Node Js
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="div1">
+                            <div class="div6">60%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        MongoDB
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="div1">
+                            <div class="div7">40%</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <footer class="footer-distributed">
+ 
+			<div class="footer-left">
+ 
+				<h3>WebDev<span>Trick</span></h3>
+       <h2>Mern Stack Development</h2>
+       <ul>
+        <li>MongoDB</li>
+        <li>Express</li>
+        <li>React</li>
+        <li>Node</li>
+       </ul>
+ 
+			</div>
+ 
+			<div class="footer-center">
+ 
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p> Muzaffarabad, Azad Kashmir</p>
+				</div>
+ 
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+923457494538</p>
+				</div>
+ 
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="asadsaddiqui@gmail.com">asadsaddiqui@gmail.com</a></p>
+				</div>
+ 
+			</div>
+ 
+			<div class="footer-right">
+ 
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+				</p>
+ 
+				<div class="footer-icons">
+ 
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+ 
+				</div>
+ 
+			</div>
+ 
+		</footer>
+     
+  </body>
+</html>
